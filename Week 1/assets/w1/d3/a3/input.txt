@@ -1,0 +1,1 @@
+The Week 1, Day 3, Assignment 3 program will read from this file.
