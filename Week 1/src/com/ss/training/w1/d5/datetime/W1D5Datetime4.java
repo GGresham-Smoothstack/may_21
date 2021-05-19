@@ -7,11 +7,13 @@ import java.time.ZonedDateTime;
 public class W1D5Datetime4 {
 	
 	public static void main(String[] args) {
-		Instant start = Instant.now();
 		
+	}
+	
+	public Instant conversion(Instant start) {
 		ZonedDateTime convert = start.atZone(ZoneId.systemDefault());
 		
-		Instant convert2 = convert.toInstant();
+		return convert.toInstant();
 	}
 
 }

@@ -6,12 +6,22 @@ public class W1D5Datetime5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		YearMonth yearMonthObject;
+		W1D5Datetime5 assign = new W1D5Datetime5();
 		//int daysInMonth = yearMonthObject.lengthOfMonth();
+		YearMonth[] months = assign.getMonths(2021);
 		for(int i=0; i<12; i++) {
-			yearMonthObject = YearMonth.of(2021, i+1);
-			System.out.println("Length of Month " + (i+1) + " in 2021: " + yearMonthObject.lengthOfMonth());
+			System.out.println("Length of Month " + (i+1) + " in 2021: " + months[i].lengthOfMonth());
 		}
+	}
+	
+	public YearMonth[] getMonths(int year) {
+		YearMonth[] months = new YearMonth[12];
+		
+		for(int i=0; i<12; i++) {
+			months[i] = YearMonth.of(year, i+1);
+		}
+		
+		return months;
 	}
 
 }
