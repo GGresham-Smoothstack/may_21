@@ -9,30 +9,46 @@ public class W1D5Lambda1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		W1D5Lambda1 assignment = new W1D5Lambda1();
+		
 		Sorter length = (i) -> {
-			String[] output = new String[i.length];
-			Arrays.sort(output, Comparator.comparing(String::length));
-			return output;
+			return assignment.length(i);
 		};
 		
 		Sorter reverseLength = (i) -> {
-			String[] output = new String[i.length];
-			Arrays.sort(output, Comparator.comparing(String::length).reversed());
-			return output;
+			return assignment.reverseLength(i);
 		};
 		
 		Sorter alpha = (i) -> {
-			String[] output = new String[i.length];
-			Arrays.sort(output, new AlphaCompare());
-			return output;
+			return assignment.alpha(i);
 		};
 		
 		Sorter e = (i) -> {
-			String[] output = new String[i.length];
-			Arrays.sort(output, new ECompare());
-			return output;
+			return assignment.e(i);
 		};
 
+	}
+	
+	public String[] length(String[] i) {
+		//String[] output = new String[i.length];
+		Arrays.sort(i, Comparator.comparing(String::length));
+		//return output;
+		return i;
+	}
+	
+	public String[] reverseLength(String[] i) {
+		Arrays.sort(i, Comparator.comparing(String::length).reversed());
+		return i;
+	}
+	
+	public String[] alpha(String[] i) {
+		Arrays.sort(i, new AlphaCompare());
+		return i;
+	}
+	
+	public String[] e(String[] i) {
+		Arrays.sort(i, new ECompare());
+		return i;
 	}
 
 }
